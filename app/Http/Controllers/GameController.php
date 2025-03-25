@@ -41,11 +41,11 @@ class GameController extends Controller
 
         if($request->hasFile('image')){
             $nombre = $game->id.'.'.$request->file('image')->getClientOriginalExtension();
-            $img = $request->file('image')->storeAs('public/img', $nombre);
-            $game->image = '/img/'.$nombre;
+            $img = $request->file('image')->storeAs('img', $nombre, 'public');
+            $game->image = 'img/'.$nombre;
             $game->save();
         }
-        
+                
         return redirect()->route('games.index')->with('success', 'Juego creado');
     }
 
@@ -79,7 +79,7 @@ class GameController extends Controller
         if($request->hasFile('image')){
             Storage::disk('public')->delete($game->image);
             $nombre = $game->id.'.'.$request->file('image')->getClientOriginalExtension();
-            $img = $request->file('image')->storeAs('public/img', $nombre);
+            $request->file('image')->storeAs('public/img', $nombre);
             $game->image = '/img/'.$nombre;
             $game->save();
         }

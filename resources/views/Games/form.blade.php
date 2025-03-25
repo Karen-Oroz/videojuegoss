@@ -38,7 +38,7 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
                         <input type="date" name="release" class="form-control" placeholder="Lanzamiento" 
-                        @isset($game) value={{$game->release}} @endisset  required>
+                        @isset($game) value="{{$game->release}}" @endisset  required>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa-solid fa-image"></i></span>

@@ -35,7 +35,7 @@
                             <td>{{$row->levels}}</td>
                             <td>{{$row->release}}</td>
                             <td>
-                                <img class="img-fluid" width="120" src="/storage/{{ $row->image}}">
+                                <img class="img-fluid" width="120" src="storage/{{ $row->image}}">
                             </td>
                             <td>
                                 <a class="btn btn-warning" href="{{route('games.edit',$row->id)}}">
@@ -61,25 +61,24 @@
         </div>
     </div>
     <div class="modal" tabindex="-1" id="modalConfirmacion">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title">¿seguro de eliminar?</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <p><i class="fa-solid fa-warning fs-3 text-warning"></i>
-            <label id="lbl_nombre"></label>
-            </p>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-danger" 
-        data-bs-dismiss="modal">Cancelar</button>
-        <button id="btnEliminar" type="button" class="btn btn-success">Si, eliminar</button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">¿seguro de eliminar?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><i class="fa-solid fa-warning fs-3 text-warning"></i>
+                        <label id="lbl_nombre"></label>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btnEliminar" type="button" class="btn btn-success">Si, eliminar</button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 @endsection
 @section('js')
     @vite('resources/js/Games/index.js')

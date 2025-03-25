@@ -1,7 +1,7 @@
 window.onload = () => {
     setTimeout(() => {
-        if(document.getElementsById('alerta') != null){
-            document.getElementsById('alerta').remove()
+        if(document.getElementById('alerta') != null){
+            document.getElementById('alerta').remove()
         }
     }, 3000);
 }
