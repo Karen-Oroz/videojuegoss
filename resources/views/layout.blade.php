@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games @yield('title')</title>
+    <title>Juegos @yield('title')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-    <a class="navbar-brand">Games</a>
+    <a class="navbar-brand">Juegos</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,7 +19,7 @@
             <a class="nav-link active" aria-current="page" href="{{url('games')}}">Listado</a>
         </li>
         <li class="nav-item">
-                            <a class="nav-link" href="{{url('games/create')}}">Crear</a>
+                            <a class="nav-link" href="{{url('games/create')}}">Crear nuevo</a>
                         </li>
                     </ul>
                 </div>
