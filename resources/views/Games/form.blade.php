@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="alert alert-dander">
-                <p><b><i class="fa-solid fa-times"></i> Errores </b></p>
+                <p><b><i class="fa-solid fa-times"></i> errores </b></p>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{error}}</li>
@@ -44,7 +44,7 @@
                         <span class="input-group-text"><i class="fa-solid fa-image"></i></span>
                         <input type="file" name="image" class="form-control" @if(!isset($game)) required @endif accept="image/*">
                     </div>
-                    <button class="btn btn-success" type="submit"> Guardar </button>
+                    <button class="btn btn-success" type="submit"> guardar </button>
                     </form>
                 </div>
             </div>
